@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PWA &amp; service worker 使用 | Hello World</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="总结 js bugfix css 兼容性">
+    <link rel="preload" href="/assets/css/0.styles.a32e4214.css" as="style"><link rel="preload" href="/assets/js/app.663657fc.js" as="script"><link rel="preload" href="/assets/js/2.cb7c72d6.js" as="script"><link rel="preload" href="/assets/js/8.ad5bc9e0.js" as="script"><link rel="prefetch" href="/assets/js/3.35a0c184.js"><link rel="prefetch" href="/assets/js/4.77c24152.js"><link rel="prefetch" href="/assets/js/5.119ead70.js"><link rel="prefetch" href="/assets/js/6.b0e942c7.js"><link rel="prefetch" href="/assets/js/7.2d1d2312.js"><link rel="prefetch" href="/assets/js/9.193e4d41.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a32e4214.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello World</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>笔记</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/core/js_handle_download_file.html" class="sidebar-link">js 文件下载</a></li><li><a href="/core/scroll.html" class="sidebar-link">子元素滚动结束带动父元素滚动问题</a></li><li><a href="/core/service_worker.html" aria-current="page" class="active sidebar-link">PWA &amp; service worker 使用</a></li><li><a href="/core/storage.html" class="sidebar-link">Cookie设置之后无法删除的情况的解决方法</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="pwa-service-worker-使用"><a href="#pwa-service-worker-使用" class="header-anchor">#</a> PWA &amp; service worker 使用</h2> <h3 id="pwa应用"><a href="#pwa应用" class="header-anchor">#</a> PWA应用</h3> <h4 id="pwa-是什么"><a href="#pwa-是什么" class="header-anchor">#</a> PWA 是什么</h4> <p>PWA（Progressive Web App）是一种理念，使用多种技术来增强web app的功能，可以让网站的体验变得更好，能够模拟一些原生功能，比如通知推送。在移动端利用标准化框架，让网页应用呈现和原生应用相似的体验。</p> <h4 id="service-worker-与-页面通信"><a href="#service-worker-与-页面通信" class="header-anchor">#</a> service worker 与 页面通信</h4> <p>page-js(向sw发送数据)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 发送</span>
+ navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span>controller<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token string">'value'</span><span class="token punctuation">)</span>
+ <span class="token comment">//监听接收</span>
+ navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'page-message-from-sw'</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span>
+    <span class="token keyword">var</span> csvUrl <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    link<span class="token punctuation">.</span>href <span class="token operator">=</span> csvUrl<span class="token punctuation">;</span>
+    link<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">'v.png'</span><span class="token punctuation">;</span>
+    link<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>sw-js (监听接收数据)</p> <div class="language-js extra-class"><pre class="language-js"><code>self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> promise <span class="token operator">=</span> self<span class="token punctuation">.</span>clients<span class="token punctuation">.</span><span class="token function">matchAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">clients</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> senderId <span class="token operator">=</span> e<span class="token punctuation">.</span>source <span class="token operator">?</span> e<span class="token punctuation">.</span>source<span class="token punctuation">.</span>id <span class="token operator">:</span> <span class="token string">'unknow'</span>
+        clients<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">client</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>senderId <span class="token operator">===</span> client<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//发送数据到page</span>
+                client<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    client<span class="token operator">:</span> senderId<span class="token punctuation">,</span>
+                    message<span class="token operator">:</span> imgRes
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// e.waitUntil(promise)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/core/scroll.html" class="prev">
+        子元素滚动结束带动父元素滚动问题
+      </a></span> <span class="next"><a href="/core/storage.html">
+        Cookie设置之后无法删除的情况的解决方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.663657fc.js" defer></script><script src="/assets/js/2.cb7c72d6.js" defer></script><script src="/assets/js/8.ad5bc9e0.js" defer></script>
+  </body>
+</html>

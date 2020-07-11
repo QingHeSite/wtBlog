@@ -1,16 +1,19 @@
 module.exports = {
-    title: 'Hello VuePress',
-    description: 'Just playing around',
+    title: 'Hello World',
+    description: '总结 js bugfix css 兼容性',
     themeConfig: {
         sidebar:  
         [
             {
                 title: '笔记',   // 必要的
-                path: '/core/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: false, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
+                sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                  '/core/scroll', '/core/service_worker'
+                  '/core/js_handle_download_file',
+                  '/core/scroll',
+                  '/core/service_worker',
+                  '/core/storage',
                 ]
               }
 
