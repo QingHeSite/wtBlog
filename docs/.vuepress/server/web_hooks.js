@@ -6,7 +6,7 @@ const app = new Koa()
 const router = new KoaRouter()
 const port = 8088
 router.post('/pushcode',ctx => {
-    console.log(ctx);
+    console.log(ctx)
     ctx.status = 200
     ctx.body = 'success'
 })
