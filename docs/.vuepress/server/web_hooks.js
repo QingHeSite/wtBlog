@@ -9,7 +9,7 @@ app.use(ctx => {
     console.log(ctx);
     if(ctx.method === 'POST' && ctx.url === '/pushcode'){
         ctx.status = 200;
-        ctx.body = 'success'
+        ctx.body = 'success';
     }else {
         ctx.status = 404
         ctx.body = '404'
