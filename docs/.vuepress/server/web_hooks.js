@@ -8,7 +8,7 @@ const port = 8091
 app.use(ctx => {
     console.log(ctx);
     if(ctx.method === 'POST' && ctx.url === '/pushcode'){
-        ctx.status = 200
+        ctx.status = 200;
         ctx.body = 'success'
     }else {
         ctx.status = 404
