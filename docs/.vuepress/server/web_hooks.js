@@ -7,7 +7,7 @@ const router = new KoaRouter()
 const port = 8091
 app.use(ctx => {
     console.log(ctx);
-    if(ctx.method === 'POST' && ctx.url === '/pushcode'){
+    if(ctx.method === 'POST' && ctx.url === '/webapi/pushcode'){
         ctx.status = 200;
         ctx.body = 'success';
     }else {
