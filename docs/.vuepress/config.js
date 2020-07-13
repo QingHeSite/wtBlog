@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Hello World',
+    title: '好好学习,天天向上',
     description: '总结 js bugfix css 兼容性',
     themeConfig: {
         sidebar:  
