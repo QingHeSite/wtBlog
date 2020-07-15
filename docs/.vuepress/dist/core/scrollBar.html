@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浏览器滚动条引发页面跳动问题 | 好好学习,天天向上</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="总结 js bugfix css 兼容性">
+    <link rel="preload" href="/assets/css/0.styles.a32e4214.css" as="style"><link rel="preload" href="/assets/js/app.169af606.js" as="script"><link rel="preload" href="/assets/js/2.cb7c72d6.js" as="script"><link rel="preload" href="/assets/js/9.3102ac36.js" as="script"><link rel="prefetch" href="/assets/js/10.0156a198.js"><link rel="prefetch" href="/assets/js/11.df39328a.js"><link rel="prefetch" href="/assets/js/3.ae75705c.js"><link rel="prefetch" href="/assets/js/4.118b8d50.js"><link rel="prefetch" href="/assets/js/5.48bda553.js"><link rel="prefetch" href="/assets/js/6.434bb4ef.js"><link rel="prefetch" href="/assets/js/7.ee1394d0.js"><link rel="prefetch" href="/assets/js/8.6ab4a9f7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a32e4214.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">好好学习,天天向上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>笔记</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/core/js_handle_download_file.html" class="sidebar-link">js 文件下载</a></li><li><a href="/core/scroll.html" class="sidebar-link">子元素滚动结束带动父元素滚动问题</a></li><li><a href="/core/service_worker.html" class="sidebar-link">PWA &amp; service worker 使用</a></li><li><a href="/core/storage.html" class="sidebar-link">Cookie设置之后无法删除的情况的解决方法</a></li><li><a href="/core/scrollBar.html" aria-current="page" class="active sidebar-link">浏览器滚动条引发页面跳动问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="浏览器滚动条引发页面跳动问题"><a href="#浏览器滚动条引发页面跳动问题" class="header-anchor">#</a> 浏览器滚动条引发页面跳动问题</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getScrollbarWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> odiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//创建一个div</span>
+        styles <span class="token operator">=</span> <span class="token punctuation">{</span>
+            width<span class="token operator">:</span> <span class="token string">'100px'</span><span class="token punctuation">,</span>
+            height<span class="token operator">:</span> <span class="token string">'100px'</span><span class="token punctuation">,</span>
+            overflowY<span class="token operator">:</span> <span class="token string">'scroll'</span><span class="token comment">//让他有滚动条</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> scrollbarWidth<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> styles<span class="token punctuation">)</span> odiv<span class="token punctuation">.</span>style<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> styles<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>odiv<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//把div添加到body中</span>
+    scrollbarWidth <span class="token operator">=</span> odiv<span class="token punctuation">.</span>offsetWidth <span class="token operator">-</span> odiv<span class="token punctuation">.</span>clientWidth<span class="token punctuation">;</span><span class="token comment">//相减</span>
+    odiv<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//移除创建的div</span>
+    <span class="token keyword">return</span> scrollbarWidth<span class="token punctuation">;</span><span class="token comment">//返回滚动条宽度</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/core/storage.html" class="prev">
+        Cookie设置之后无法删除的情况的解决方法
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.169af606.js" defer></script><script src="/assets/js/2.cb7c72d6.js" defer></script><script src="/assets/js/9.3102ac36.js" defer></script>
+  </body>
+</html>

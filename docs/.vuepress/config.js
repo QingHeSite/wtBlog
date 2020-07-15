@@ -14,6 +14,7 @@ module.exports = {
                   '/core/scroll',
                   '/core/service_worker',
                   '/core/storage',
+                  '/core/scrollBar'
                 ]
               }
 
