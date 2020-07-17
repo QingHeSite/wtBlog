@@ -1,6 +1,9 @@
 module.exports = {
     title: '好好学习,天天向上',
     description: '总结 js bugfix css 兼容性',
+    markdown: {
+      lineNumbers: true
+    },
     themeConfig: {
         sidebar:  
         [
@@ -14,7 +17,8 @@ module.exports = {
                   '/core/scroll',
                   '/core/service_worker',
                   '/core/storage',
-                  '/core/scrollBar'
+                  '/core/scrollBar',
+                  '/core/comcept'
                 ]
               }
 
