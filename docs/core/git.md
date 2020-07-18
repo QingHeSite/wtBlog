@@ -5,4 +5,8 @@
 
 - 解决每次拉取代码都需要填写合并信息
 
-`日志  webhooks 发布版`
+```
+git checkout .
+git reset --hard origin/master
+git pull
+```
