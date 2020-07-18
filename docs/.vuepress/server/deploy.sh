@@ -18,6 +18,7 @@ echo '--start deploy'
 
 PROJECT_PATH=/root/front_end/wtBlog
 git status
+git checkout .
 git reset --hard origin/master
 git pull
 git status
