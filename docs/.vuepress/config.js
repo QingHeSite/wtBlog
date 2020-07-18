@@ -18,7 +18,7 @@ module.exports = {
                   '/core/service_worker',
                   '/core/storage',
                   '/core/scrollBar',
-                  '/core/comcept'
+                  '/core/concept'
                 ]
               }
 

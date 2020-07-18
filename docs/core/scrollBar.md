@@ -1,4 +1,5 @@
 ### 浏览器滚动条引发页面跳动问题
+
 ```js
 function getScrollbarWidth() {
     var odiv = document.createElement('div'),//创建一个div

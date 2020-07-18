@@ -8,6 +8,9 @@ const port = 8091
 app.use(ctx => {
     console.log(ctx);
     if(ctx.method === 'POST' && ctx.url === '/webapi/pushcode'){
+        process.exec('./deploy.sh', (error,stdout, stderr) => {
+            console.log(error,stdout);
+        },)
         ctx.status = 200;
         ctx.body = 'success';
     }else {
