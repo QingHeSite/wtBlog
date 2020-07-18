@@ -4,3 +4,5 @@
 `git config --global credential.helper store`
 
 - 解决每次拉取代码都需要填写合并信息
+
+`1`
