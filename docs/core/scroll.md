@@ -1,4 +1,5 @@
 ## 子元素滚动结束带动父元素滚动问题
+- 解决子元素滚动结束后会带动父元素滚动
 - 这是浏览器的默认行为,以下是基于jq的扩展
 - [参考文章张鑫旭](https://www.zhangxinxu.com/wordpress/2015/12/element-scroll-prevent-parent-element-scroll-js/)
 ```js
