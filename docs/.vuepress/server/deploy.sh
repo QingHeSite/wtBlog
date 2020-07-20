@@ -17,11 +17,14 @@ echo '--start deploy'
 
 
 PROJECT_PATH=/root/front_end/wtBlog
+SERVER_PATH=/root/front_end/wtBlog/docs/.vuepress/server
 git status
 git checkout .
 git reset --hard origin/master
 git pull
 git status
 pm2 restart 0
+cd $SERVER_PATH
+node ./send_mail.js
 
 echo '--end deploy'
