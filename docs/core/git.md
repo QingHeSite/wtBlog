@@ -15,3 +15,5 @@ git pull
 - `git checkout .`
 
 使用暂存区的文件覆盖工作区，所以执行完git add .之后，再执行该命令是无效的
+
+- `git `
