@@ -1,5 +1,5 @@
 module.exports = {
-    title: '好好学习,天天向上',
+    title: '好好学习,天天向上(持续更新)',
     description: '总结 js bugfix css 兼容性',
     markdown: {
       lineNumbers: true
@@ -31,5 +31,19 @@ module.exports = {
             //   '/scroll/scroll'
             // ]
         ],
-    }
+    },
+    plugins: [
+      [
+        'vuepress-plugin-comment',
+        {
+          choosen: 'valine', 
+          // options选项中的所有参数，会传给Valine的配置
+          options: {
+            el: '#valine-vuepress-comment',
+            appId: '21G8ftRHwJm0HSY3gASNfVts-gzGzoHsz',
+            appKey: 'Q7WNJnWJOafr6ILQbdfjOptY'
+          }
+        }
+      ]
+    ]
 }

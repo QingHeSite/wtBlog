@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{350:function(n,e,t){"use strict";t.r(e);var a={name:"indexPage",data:function(){return{page:"index-"}},mounted:function(){}},i=t(42),u=Object(i.a)(a,(function(){var n=this.$createElement;return(this._self._c||n)("div",[this._v("\n    page 首页\n")])}),[],!1,null,null,null);e.default=u.exports}}]);
