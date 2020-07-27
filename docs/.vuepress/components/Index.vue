@@ -1,6 +1,6 @@
 <template>
     <div>
-        page 首页
+        有任何问题,欢迎留言!
     </div>
 </template>
 <script>

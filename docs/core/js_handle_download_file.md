@@ -1,3 +1,8 @@
+---
+permalink: '/download/'
+---
+
+
 ## js 文件下载
 特点
 - 可自定义进度条(需返回content-length)

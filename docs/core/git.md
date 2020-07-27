@@ -1,3 +1,6 @@
+---
+permalink: '/core/git/'
+---
 ## GIT常用命令
 - 使用 https 和远程仓库通信，Git 默认每次操作都需要输入用户名和密码，十分麻烦,以下命令可保存登录态
 
@@ -16,4 +19,5 @@ git pull
 
 使用暂存区的文件覆盖工作区，所以执行完git add .之后，再执行该命令是无效的
 
-- `git `
+- `git log --oneline --graph --decorate`
+本地查看当前分支开自哪个分支

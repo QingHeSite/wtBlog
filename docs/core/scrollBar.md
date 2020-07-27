@@ -1,4 +1,8 @@
-### 浏览器滚动条引发页面跳动问题
+---
+permalink: '/core/scrollBar/'
+---
+
+## 浏览器滚动条引发页面跳动问题
 
 ```js
 function getScrollbarWidth() {

@@ -1,3 +1,7 @@
+---
+permalink: '/core/service_worker.html'
+---
+
 ## PWA & service worker 使用
 
 ### PWA应用

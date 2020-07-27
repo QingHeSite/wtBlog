@@ -19,7 +19,8 @@ module.exports = {
                   '/core/storage',
                   '/core/scrollBar',
                   '/core/concept',
-                  '/core/git'
+                  '/core/git',
+                  '/core/browser_analysis_doc'
                 ]
               }
 
@@ -41,9 +42,21 @@ module.exports = {
           options: {
             el: '#valine-vuepress-comment',
             appId: '21G8ftRHwJm0HSY3gASNfVts-gzGzoHsz',
-            appKey: 'Q7WNJnWJOafr6ILQbdfjOptY'
+            appKey: 'Q7WNJnWJOafr6ILQbdfjOptY',
+            path: '<%- frontmatter.commentid || frontmatter.permalink %>'
           }
         }
       ]
-    ]
+    // [
+    //   '@vuepress/register-components',
+    //   {
+    //     componentsDir: './components'
+    //   }
+    // ]
+
+    ],
+    head: [
+      // ["link", { rel: "shortcut icon", href: "/images/favicon.ico" }],
+      // ["link", { rel: "stylesheet", href: "/style/style.css" }],
+  ],
 }
