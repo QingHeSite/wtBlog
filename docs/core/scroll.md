@@ -37,30 +37,28 @@ $().scrollUnique();
 ```
 但是,仅仅需要这一个功能就载入jq,始终是不划算的,所以简单修改后,去除jq
 ```ts
-            const scrollUnique = (function () {
-                var eventType = 'mousewheel';
-                if ((document as any).mozHidden !== undefined) {
-                    eventType = 'DOMMouseScroll';
-                }
-                return function (ele) {
-                    ele.addEventListener(eventType,function (event) {
-                        var scrollTop = this.scrollTop,
-                            scrollHeight = this.scrollHeight,
-                            height = this.clientHeight;
-                        var delta = (event.wheelDelta) ? event.wheelDelta : -(event.wheelDelta || 0);
-
-                        if ((delta > 0 && scrollTop <= delta) || (delta < 0 && scrollHeight - height - scrollTop <= -1 * delta)) {
-                            // IE浏览器下滚动会跨越边界直接影响父级滚动，因此，临界时候手动边界滚动定位
-                            this.scrollTop = delta > 0 ? 0 : scrollHeight;
-                            // 向上滚 || 向下滚
-                            event.preventDefault();
-                        }
-                    })
-                }
-            })()
-            const eleScrollList = document.querySelectorAll('#msg-cont .__panel')
-
-            eleScrollList.forEach(ele => {
-                scrollUnique(ele)
-            })
+const scrollUnique = (function () {
+    var eventType = 'mousewheel';
+    if ((document as any).mozHidden !== undefined) {
+        eventType = 'DOMMouseScroll';
+    }
+    return function (ele) {
+        ele.addEventListener(eventType,function (event) {
+            var scrollTop = this.scrollTop,
+                scrollHeight = this.scrollHeight,
+                height = this.clientHeight;
+            var delta = (event.wheelDelta) ? event.wheelDelta : -(event.wheelDelta || 0);
+            if ((delta > 0 && scrollTop <= delta) || (delta < 0 && scrollHeight - height - scrollTop <= -1 * delta)) {
+             // IE浏览器下滚动会跨越边界直接影响父级滚动，因此，临界时候手动边界滚动定位
+             this.scrollTop = delta > 0 ? 0 : scrollHeight;
+             // 向上滚 || 向下滚
+             event.preventDefault();
+               }
+          })
+     }
+})()
+const eleScrollList = document.querySelectorAll('#msg-cont .__panel')
+eleScrollList.forEach(ele => {
+    scrollUnique(ele)
+        })
 ```

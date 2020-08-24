@@ -2,8 +2,27 @@
 permalink: '/core/scrollBar/'
 ---
 
-## 浏览器滚动条引发页面跳动问题
+## 处理浏览器滚动条 显示|隐藏 时引发页面跳动问题
+- css 处理方式(最优雅)
+```css
+html {overflow-y:scroll}
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+```
+
+- js处理方式
 ```js
 function getScrollbarWidth() {
     var odiv = document.createElement('div'),//创建一个div
