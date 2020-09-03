@@ -20,7 +20,9 @@ module.exports = {
                   '/core/scrollBar',
                   '/core/concept',
                   '/core/git',
-                  '/core/browser_analysis_doc'
+                  '/core/browser_analysis_doc',
+                  '/core/regular',
+                  '/core/cross_origin_resource_sharing'
                 ]
               }
 
