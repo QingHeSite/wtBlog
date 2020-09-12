@@ -22,7 +22,8 @@ module.exports = {
                   '/core/git',
                   '/core/browser_analysis_doc',
                   '/core/regular',
-                  '/core/cross_origin_resource_sharing'
+                  '/core/cross_origin_resource_sharing',
+                  '/core/docker'
                 ]
               }
 
