@@ -15,3 +15,6 @@ permalink: '/core/docker/'
 
   ##### 进入容器命令
   `docker exec -it Container-ID /bin/bash`
+
+  ##### 宿主环境中执行docker容器内脚本
+  `docker exec -it Container-ID /bin/bash -c 'cd / && ./hello.shell'`
