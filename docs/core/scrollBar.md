@@ -38,3 +38,21 @@ function getScrollbarWidth() {
     return scrollbarWidth;//返回滚动条宽度
 }
 ```
+
+#### css修改滚动条样式
+```css
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7f7f7f;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+```

@@ -14,6 +14,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                   '/core/js_handle_download_file',
+                  '/core/function_throttle_debounce',
                   '/core/scroll',
                   '/core/service_worker',
                   '/core/storage',
