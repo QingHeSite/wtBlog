@@ -17,7 +17,7 @@ permalink: '/core/docker/'
   `docker exec -it Container-ID /bin/bash`
 
   ##### 基础 Dockerfile 示例
-  ```
+  ```dockerfile
 FROM oberonamsterdam/pm2-git:12-alpine
 
 RUN mkdir -p /usr/src/app/node-sass
