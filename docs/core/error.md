@@ -10,4 +10,4 @@ error  Module build failed (from ./node_modules/sass-loader/lib/loader.js):
                compatible version.     at Object.sassLoader
                (D:\work\browser-plugins\node_modules\sass-loader\lib\loader.js:
 ```
-- 解决 `npm rebuild node-sass`
+- 解决 `npm rebuild node-sass` 或者 `npm i node-sass`
