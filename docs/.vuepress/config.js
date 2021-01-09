@@ -25,7 +25,8 @@ module.exports = {
                   '/core/regular',
                   '/core/cross_origin_resource_sharing',
                   '/core/docker',
-                  '/core/error'//常见错误解决
+                  '/core/error',//常见错误解决
+                  '/core/performance',//网页性能
                 ]
               }
 
