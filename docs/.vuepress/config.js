@@ -24,7 +24,8 @@ module.exports = {
                   '/core/browser_analysis_doc',
                   '/core/regular',
                   '/core/cross_origin_resource_sharing',
-                  '/core/docker'
+                  '/core/docker',
+                  '/core/error'//常见错误解决
                 ]
               }
 
