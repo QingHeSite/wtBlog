@@ -37,3 +37,5 @@ VOLUME /root/front-end
 WORKDIR /root
 CMD ["sh", "ls", "-a" ]
   ```
+- 删除本地镜像
+   `docker image rm -f 镜像ID`  
