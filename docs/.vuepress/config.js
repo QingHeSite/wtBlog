@@ -1,5 +1,5 @@
 module.exports = {
-    title: '好好学习,天天向上(持续更新)',
+    title: '今天是未来的过去',
     description: '总结 js bugfix css 兼容性',
     markdown: {
       lineNumbers: true
