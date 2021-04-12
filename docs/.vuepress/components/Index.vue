@@ -1,6 +1,6 @@
 <template>
     <div>
-        前端开发~
+        前端开发~~
     </div>
 </template>
 <script>
