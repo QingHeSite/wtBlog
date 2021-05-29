@@ -28,7 +28,8 @@ module.exports = {
                   '/core/error',//常见错误解决
                   '/core/performance',//网页性能
                   '/core/typescript',// ts
-                  `/core/img`
+                  `/core/img`,
+                  `/core/node`, // 深入浅出node
                 ]
               }
 
