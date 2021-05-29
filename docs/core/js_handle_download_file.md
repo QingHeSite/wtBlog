@@ -46,16 +46,3 @@ var link = document.createElement('a');
     }
     xhr.send();
 ```
-
-```js
-let pathNames = ['/searchhome.html', '/freecopyright']
-      //去服务器取得图片详情页信息
-    let domain = Config.Servers.mainSearchNode
-    if(pathNames.includes(location.pathname)){
-      domain = Config.Servers.mainSearchNodeSh
-    }else {
-      if(item.siteInfo.resolveDomain){
-        domain = domain.replace('shyb',item.siteInfo.resolveDomain)
-      }
-    }
-```
