@@ -8,3 +8,8 @@ permalink: '/core/command/'
 2. kill `taskkill -PID 25280 -F`
 
 ### linux
+###### 查看80端口连接数最多的20个IP
+- netstat -anlp|grep 80|grep tcp|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -nr|head -n20
+
+###### 统计80端口连接数
+- netstat -nat|grep -i "80"|wc -l
