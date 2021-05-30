@@ -3,7 +3,7 @@ permalink: '/download/'
 ---
 
 
-## js 文件下载
+## js 文件下载(ie兼容)
 特点
 - 可自定义进度条(需返回content-length)
 - 通过响应的状态码`Status Code`可判断是否下载成功
@@ -28,6 +28,12 @@ var link = document.createElement('a');
         console.log(xhr.status);
         console.log(xhr.response);
         if (xhr.readyState === 4 && xhr.status === 200) {
+          /** ie兼容性 */
+          if (window.navigator.msSaveOrOpenBlob) {
+                var blob = new Blob([xhr.response], {type: 'jpeg/png'});
+                window.navigator.msSaveOrOpenBlob(blob, '123.jpeg' )
+                return
+        }
             var isBlob = xhr.response instanceof Blob;
             var blob = new Blob([xhr.response], {type: 'jpeg/png'});
             var csvUrl = URL.createObjectURL(blob);
@@ -39,17 +45,4 @@ var link = document.createElement('a');
         }
     }
     xhr.send();
-```
-
-```js
-let pathNames = ['/searchhome.html', '/freecopyright']
-      //去服务器取得图片详情页信息
-    let domain = Config.Servers.mainSearchNode
-    if(pathNames.includes(location.pathname)){
-      domain = Config.Servers.mainSearchNodeSh
-    }else {
-      if(item.siteInfo.resolveDomain){
-        domain = domain.replace('shyb',item.siteInfo.resolveDomain)
-      }
-    }
 ```

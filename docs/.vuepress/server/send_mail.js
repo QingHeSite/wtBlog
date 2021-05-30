@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
   var mailOptions = {
     from: 'wangtao425012251@qq.com', // 发送者
     to: '425012251@qq.com,skymrwt@gmail.com', // 接受者,可以同时发送多个,以逗号隔开
-    subject: 'Bolg updated(wangtao.plus)', // 标题
+    subject: 'Blog updated(wangtao.plus)', // 标题
     //text: 'Hello world', // 文本
     html: `<h2>www.wangtao.plus 更新提示</h2><h3>
     <a href="https://www.wangtao.plus">

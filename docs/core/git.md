@@ -22,5 +22,8 @@ git pull
 - `git log --oneline --graph --decorate`
 本地查看当前分支开自哪个分支
 
+- `git push -u origin master -f`
+强制推送到远程分支(慎用)
+
 ##### linux上清除保存的git账号
 `vi ~/.git-credentials`,删除记录的账号即可,下次`clone`or`pull`就需要手动输入账号了

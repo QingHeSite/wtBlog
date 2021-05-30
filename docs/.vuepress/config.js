@@ -1,5 +1,5 @@
 module.exports = {
-    title: '好好学习,天天向上(持续更新)',
+    title: '今天_',
     description: '总结 js bugfix css 兼容性',
     markdown: {
       lineNumbers: true
@@ -27,6 +27,9 @@ module.exports = {
                   '/core/docker',
                   '/core/error',//常见错误解决
                   '/core/performance',//网页性能
+                  '/core/typescript',// ts
+                  `/core/img`,
+                  `/core/node`, // 深入浅出node
                 ]
               }
 

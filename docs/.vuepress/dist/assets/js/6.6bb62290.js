@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{366:function(n,e,t){"use strict";t.r(e);var i={name:"indexPage",data:function(){return{page:"index-"}},mounted:function(){}},u=t(25),a=Object(u.a)(i,(function(){var n=this.$createElement;return(this._self._c||n)("div",[this._v("\n    有任何问题,欢迎留言!\n")])}),[],!1,null,null,null);e.default=a.exports}}]);
