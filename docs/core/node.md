@@ -56,7 +56,7 @@ permalink: '/core/node/'
     > **process** 获取当前进程信息
     > **platform** 获取当前平台信息,区分系统. (windows > win32, mac > darwin)
     >**argv** 用户传入的参数
-    > **cwd**
+    > **cwd** 当前执行的所处路径
     
 
 
