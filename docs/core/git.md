@@ -27,3 +27,7 @@ git pull
 
 ##### linux上清除保存的git账号
 `vi ~/.git-credentials`,删除记录的账号即可,下次`clone`or`pull`就需要手动输入账号了
+
+### Git工作规范
+##### 使用流程
+基于devlope创建feature分支 -> 合并到devlope分支(供测试人员测试) -> 基于devlope创建release分支(进行预生产测试) -> 合并到master分支(正式上线)
