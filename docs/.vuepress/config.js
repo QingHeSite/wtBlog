@@ -1,6 +1,7 @@
 module.exports = {
-    title: '今天_',
-    description: '总结 js bugfix css 兼容性',
+    title: '开发笔记',
+    description: '总结项目开发经验 js css 兼容性',
+    keywords: '开发踩坑,面试',
     markdown: {
       lineNumbers: true
     },
