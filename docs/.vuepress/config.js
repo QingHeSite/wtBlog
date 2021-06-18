@@ -56,7 +56,13 @@ module.exports = {
             path: '<%- frontmatter.commentid || frontmatter.permalink %>'
           }
         }
-      ]
+      ],
+      ['sitemap', {
+        hostname: "https://www.wangtao.plus",
+        // 排除无实际内容的页面
+        exclude: ["/404.html"]
+      }
+  ]
     // [
     //   '@vuepress/register-components',
     //   {
