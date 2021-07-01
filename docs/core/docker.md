@@ -39,3 +39,9 @@ CMD ["sh", "ls", "-a" ]
   ```
 - 删除本地镜像
    `docker image rm -f 镜像ID`  
+- 停止容器
+  `docker stop [contaninerId]`
+- 删除所有停止的容器
+  `docker container prune`
+- 从镜像启动容器(见上基本步骤2)
+  
