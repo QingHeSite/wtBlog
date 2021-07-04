@@ -31,6 +31,7 @@ module.exports = {
                   '/core/typescript',// ts
                   `/core/img`,
                   `/core/node`, // 深入浅出node
+                  `/core/vim` 
                 ]
               }
 
