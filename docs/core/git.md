@@ -43,6 +43,10 @@ git pull
 `git rebase --i HEAD~3`
 - `--i` 表示interactive  交互
 - 交互中指令 `squash`-与上个commit message 合并,`pick` 保留commit  message 信息
+  
+#### git 错误处理
+1. error Command "husky-run" not found.
+解决 rm -rf .git/hooks
 
 
 

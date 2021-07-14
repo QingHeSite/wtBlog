@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.2">
     
     <meta name="description" content="总结项目开发经验 js css 兼容性">
-    <link rel="preload" href="/assets/css/0.styles.4679d421.css" as="style"><link rel="preload" href="/assets/js/app.5b58f9c7.js" as="script"><link rel="preload" href="/assets/js/3.ff21280f.js" as="script"><link rel="preload" href="/assets/js/16.caec9fc6.js" as="script"><link rel="prefetch" href="/assets/js/1.b699c54d.js"><link rel="prefetch" href="/assets/js/10.2a44cb5f.js"><link rel="prefetch" href="/assets/js/11.88659480.js"><link rel="prefetch" href="/assets/js/12.3c178a13.js"><link rel="prefetch" href="/assets/js/13.58ece783.js"><link rel="prefetch" href="/assets/js/14.f1486f69.js"><link rel="prefetch" href="/assets/js/15.60977dea.js"><link rel="prefetch" href="/assets/js/17.037e80a2.js"><link rel="prefetch" href="/assets/js/18.26916887.js"><link rel="prefetch" href="/assets/js/19.44e6bb0d.js"><link rel="prefetch" href="/assets/js/20.006c069b.js"><link rel="prefetch" href="/assets/js/21.1181fa14.js"><link rel="prefetch" href="/assets/js/22.3b0b5bab.js"><link rel="prefetch" href="/assets/js/23.ea3403a2.js"><link rel="prefetch" href="/assets/js/24.53f27758.js"><link rel="prefetch" href="/assets/js/25.00a75471.js"><link rel="prefetch" href="/assets/js/26.2f2a9bfb.js"><link rel="prefetch" href="/assets/js/27.2e1337fa.js"><link rel="prefetch" href="/assets/js/28.8da0dd5c.js"><link rel="prefetch" href="/assets/js/29.8de65d14.js"><link rel="prefetch" href="/assets/js/30.d813ae18.js"><link rel="prefetch" href="/assets/js/31.586247fa.js"><link rel="prefetch" href="/assets/js/4.1d287471.js"><link rel="prefetch" href="/assets/js/5.0056dd61.js"><link rel="prefetch" href="/assets/js/6.57ba936e.js"><link rel="prefetch" href="/assets/js/7.a6bba7bc.js"><link rel="prefetch" href="/assets/js/8.a563aa78.js"><link rel="prefetch" href="/assets/js/9.f3adc01d.js">
+    <link rel="preload" href="/assets/css/0.styles.4679d421.css" as="style"><link rel="preload" href="/assets/js/app.a38f121c.js" as="script"><link rel="preload" href="/assets/js/3.ff21280f.js" as="script"><link rel="preload" href="/assets/js/16.2f48f9e6.js" as="script"><link rel="prefetch" href="/assets/js/1.b699c54d.js"><link rel="prefetch" href="/assets/js/10.a5cecb1f.js"><link rel="prefetch" href="/assets/js/11.dfde8d91.js"><link rel="prefetch" href="/assets/js/12.87200940.js"><link rel="prefetch" href="/assets/js/13.58ece783.js"><link rel="prefetch" href="/assets/js/14.4f67755a.js"><link rel="prefetch" href="/assets/js/15.9e3f89c0.js"><link rel="prefetch" href="/assets/js/17.037e80a2.js"><link rel="prefetch" href="/assets/js/18.9b5d7153.js"><link rel="prefetch" href="/assets/js/19.44e6bb0d.js"><link rel="prefetch" href="/assets/js/20.8d091073.js"><link rel="prefetch" href="/assets/js/21.1181fa14.js"><link rel="prefetch" href="/assets/js/22.3b0b5bab.js"><link rel="prefetch" href="/assets/js/23.febbf951.js"><link rel="prefetch" href="/assets/js/24.db403a1f.js"><link rel="prefetch" href="/assets/js/25.00a75471.js"><link rel="prefetch" href="/assets/js/26.2f2a9bfb.js"><link rel="prefetch" href="/assets/js/27.2e1337fa.js"><link rel="prefetch" href="/assets/js/28.8da0dd5c.js"><link rel="prefetch" href="/assets/js/29.8de65d14.js"><link rel="prefetch" href="/assets/js/30.d813ae18.js"><link rel="prefetch" href="/assets/js/31.586247fa.js"><link rel="prefetch" href="/assets/js/4.1d287471.js"><link rel="prefetch" href="/assets/js/5.0056dd61.js"><link rel="prefetch" href="/assets/js/6.57ba936e.js"><link rel="prefetch" href="/assets/js/7.a6bba7bc.js"><link rel="prefetch" href="/assets/js/8.a563aa78.js"><link rel="prefetch" href="/assets/js/9.f3adc01d.js">
     <link rel="stylesheet" href="/assets/css/0.styles.4679d421.css">
   </head>
   <body>
@@ -15,7 +15,15 @@
                Error: `sass-loader` requires `node-sass` &gt;=4. Please install a
                compatible version.     at Object.sassLoader
                (D:\work\browser-plugins\node_modules\sass-loader\lib\loader.js:
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>解决 <code>npm rebuild node-sass</code> 或者 <code>npm i node-sass</code></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>解决 <code>npm rebuild node-sass</code> 或者 <code>npm i node-sass</code></li></ul> <h4 id="linux上进行-npm-install-报错"><a href="#linux上进行-npm-install-报错" class="header-anchor">#</a> linux上进行 npm install 报错</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>gyp ERR! configure error 
+gyp ERR! stack Error: EACCES: permission denied, mkdir '/data/front-end/ssr-page/node_modules/node-sass/.node-gyp'
+gyp ERR! System Linux 3.10.0-514.26.2.el7.x86_64
+gyp ERR! command &quot;/usr/local/nodejs/node-v10.2.0-linux-x64/bin/node&quot; &quot;/data/front-end/ssr-page/node_modules/node-gyp/bin/node-gyp.js&quot; &quot;rebuild&quot; &quot;--verbose&quot; &quot;--libsass_ext=&quot; &quot;--libsass_cflags=&quot; &quot;--libsass_ldflags=&quot; &quot;--libsass_library=&quot;
+gyp ERR! cwd /data/front-end/ssr-page/node_modules/node-sass
+gyp ERR! node -v v10.2.0
+gyp ERR! node-gyp -v v3.8.0
+gyp ERR! not ok 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>错误提示中有权限不足</li> <li>解决<code>npm i --unsafe-perm=true --allow-root</code></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/core/docker/" class="prev">
         Docker
@@ -24,6 +32,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
-    <script src="/assets/js/app.5b58f9c7.js" defer></script><script src="/assets/js/3.ff21280f.js" defer></script><script src="/assets/js/16.caec9fc6.js" defer></script>
+    <script src="/assets/js/app.a38f121c.js" defer></script><script src="/assets/js/3.ff21280f.js" defer></script><script src="/assets/js/16.2f48f9e6.js" defer></script>
   </body>
 </html>
