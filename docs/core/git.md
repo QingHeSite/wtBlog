@@ -15,15 +15,18 @@ git pull
 ```
 
 ##### git 命令解释
-- `git checkout .`
 
 使用暂存区的文件覆盖工作区，所以执行完git add .之后，再执行该命令是无效的
+- `git checkout .`
 
-- `git log --oneline --graph --decorate`
 本地查看当前分支开自哪个分支
+- `git log --oneline --graph --decorate`
 
-- `git push -u origin master -f`
 强制推送到远程分支(慎用)
+- `git push -u origin master -f`
+
+删除远程分支
+- `git push origin --delete [分支名]`
 
 ##### linux上清除保存的git账号
 `vi ~/.git-credentials`,删除记录的账号即可,下次`clone`or`pull`就需要手动输入账号了
@@ -43,6 +46,10 @@ git pull
 `git rebase --i HEAD~3`
 - `--i` 表示interactive  交互
 - 交互中指令 `squash`-与上个commit message 合并,`pick` 保留commit  message 信息
+  
+#### git 错误处理
+1. error Command "husky-run" not found.
+解决 rm -rf .git/hooks
 
 
 
