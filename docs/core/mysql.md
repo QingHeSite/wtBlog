@@ -1,0 +1,4 @@
+---
+permalink: '/core/mysql/'
+---
+## mysql

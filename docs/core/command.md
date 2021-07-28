@@ -13,3 +13,9 @@ permalink: '/core/command/'
 
 ###### 统计80端口连接数
 - netstat -nat|grep -i "80"|wc -l
+
+###### 查找nginx配置文件
+1. ps aux|grep nginx
+---
+- `nginx -t`
+ 
