@@ -18,4 +18,7 @@ permalink: '/core/command/'
 1. ps aux|grep nginx
 ---
 - `nginx -t`
+
+##### CentOS 安装git
+`yum install git`
  
