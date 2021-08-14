@@ -21,4 +21,15 @@ permalink: '/core/command/'
 
 ##### CentOS 安装git
 `yum install git`
+
+##### CentOS 安装 docker
+
+`curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun`
+
+启动docker服务
+`ststemctl start docker`
+
+查看内网ip
+`ifconfig | grep inet`
+
  
