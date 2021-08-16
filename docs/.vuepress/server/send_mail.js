@@ -27,14 +27,3 @@ var transporter = nodemailer.createTransport({
     console.log('发送成功');
   });
 
-  const a = {
-    b:3,
-    a: 4,
-    d: 5
-}
-for (let k in a) {
-    console.log(k)
-    if(a[k]> 3) {
-      break
-    }
-}
