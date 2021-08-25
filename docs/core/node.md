@@ -82,3 +82,20 @@ v8引擎的内存由`新生代内存`和`老生代内存`组成,在不同的系�
 64位系统: 新生代 > 32MB, 老生代 > 1400MB
 
 同时内存又分为`堆内内存`与`堆外内存`,老生代与新生代就属于堆内内存,像声明的变量就分配到堆内内存里了,`buffer`这种数据比较特殊,就分配到堆外内存了.
+
+### Buffer
+
+正确的Buffer拼接
+```js
+var chunks = [];
+var size = 0;
+res.on('data', function (chunk) {
+    chunks.push(chunk);
+    size += chunk.length;
+});
+res.on('end', function () {
+    var buf = Buffer.concat(chunks, size);
+    var str = iconv.decode(buf, 'utf8');
+    console.log(str);
+});
+```
