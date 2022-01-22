@@ -46,4 +46,9 @@ permalink: '/core/command/'
 查看内网ip
 `ifconfig | grep inet`
 
+##### 文件操作
+拷贝文件 保持层级
+`--parents`保存层级结构
+`cp --parents ./b/**/*.txt ./a`
+
  
