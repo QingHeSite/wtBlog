@@ -26,3 +26,4 @@ var transporter = nodemailer.createTransport({
  
     console.log('发送成功');
   });
+

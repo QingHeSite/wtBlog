@@ -6,6 +6,7 @@ module.exports = {
       lineNumbers: true
     },
     themeConfig: {
+      // nav: [{}],
         sidebar:  
         [
             {
@@ -31,7 +32,11 @@ module.exports = {
                   '/core/typescript',// ts
                   `/core/img`,
                   `/core/node`, // 深入浅出node
-                  `/core/vim` 
+                  `/core/vim`,
+                  `/core/mysql`, // mysql
+                  `/core/site`,
+                  `/core/command`,// 服务器端一些命令
+                  `/core/net_bridge`// vpn
                 ]
               }
 

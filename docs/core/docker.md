@@ -37,8 +37,10 @@ VOLUME /root/front-end
 WORKDIR /root
 CMD ["sh", "ls", "-a" ]
   ```
-- 删除本地镜像
-   `docker image rm -f 镜像ID`  
+- 删除镜像
+   `docker rmi -f 镜像ID`  
+- 删除容器
+   `docker rm [contaninerId]`
 - 停止容器
   `docker stop [contaninerId]`
 - 删除所有停止的容器
