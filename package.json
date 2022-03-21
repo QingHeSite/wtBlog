@@ -4,10 +4,10 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
-    "node-sass": "4.0.1",
-    "sass-loader": "10.1.1",
+    "node-sass": "4.14.1",
+    "sass-loader": "9.0.2",
     "vuepress": "^0.14.11",
-    "vuepress-plugin-comment": "^0.7.3"
+    "vuepress-plugin-comment": "^0.5.1"
   },
   "dependencies": {
     "leancloud-storage": "^4.6.1",
