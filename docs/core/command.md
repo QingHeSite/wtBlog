@@ -89,5 +89,6 @@ ServerAliveInterval 10
 ##### mac 显示|关闭隐藏文件
 - 显示 `defaults write com.apple.finder AppleShowAllFiles -bool TRUE`
 - 隐藏 `defaults write com.apple.finder AppleShowAllFiles -bool FALSE`
+
 需要重启访达生效 `option+command+右键访达`
 
