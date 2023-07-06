@@ -32,6 +32,7 @@ module.exports = {
                   '/core/typescript',// ts
                   `/core/img`,
                   `/core/node`, // 深入浅出node
+                  `/core/vim`,
                   `/core/mysql`, // mysql
                   `/core/site`,
                   `/core/command`,// 服务器端一些命令
