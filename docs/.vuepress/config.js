@@ -35,7 +35,8 @@ module.exports = {
                   `/core/mysql`, // mysql
                   `/core/site`,
                   `/core/command`,// 服务器端一些命令
-                  `/core/net_bridge`// vpn
+                  `/core/net_bridge`,// vpn
+                  `/core/drag`
                 ]
               }
 
