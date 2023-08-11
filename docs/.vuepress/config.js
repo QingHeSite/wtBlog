@@ -2,7 +2,6 @@ module.exports = {
     title: '开发笔记',
     description: '总结项目开发经验 js css 兼容性',
     keywords: '开发踩坑,面试',
-    base: '/wtBlog/',
     markdown: {
       lineNumbers: true
     },
