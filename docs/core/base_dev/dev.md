@@ -1,11 +1,12 @@
 ---
-permalink: '/core/dev/'
+title: '前端开发'
+permalink: '/core/base_dev/dev/'
 sidebarDepth: 2
 ---
+<!-- 
+## 前端开发 -->
 
-# 前端开发
-
-#### Masonry
+### Masonry
 - create生命周期内计算所有item位置
 - 计算步骤
 	1. 创建列高度数组`colHeight` -- `calColumn` => `容器宽度/gridItem`得到列数,
@@ -43,4 +44,4 @@ const endY = view.y + view.height + distance  === 1190(根据滚动距离y计算
 ```
   
 
-#### 小程序开发
+### 小程序开发

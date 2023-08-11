@@ -1,4 +1,5 @@
 ---
+title: 'windows和linux中常用命令'
 permalink: '/core/command/'
 ---
 ## windows和linux中常用命令

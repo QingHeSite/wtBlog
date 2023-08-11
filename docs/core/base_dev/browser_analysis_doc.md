@@ -1,4 +1,5 @@
 ---
+title: '关于浏览器解析doc顺序'
 permalink: '/core/browser_analysis_doc/'
 sidebarDepth: 2
 ---

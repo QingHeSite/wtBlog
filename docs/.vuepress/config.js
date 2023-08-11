@@ -7,48 +7,53 @@ module.exports = {
     },
     themeConfig: {
       // nav: [{}],
+      sidebarDepth: 2,
         sidebar:  
         [
-            {
-                title: '笔记',   // 必要的
-                path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            // {
+            //     title: '笔记',   // 必要的
+            //     path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            //     collapsable: false, // 可选的, 默认值是 true,
+            //     displayAllHeaders: true, // 默认值：false
+            //     sidebarDepth: 2,    // 可选的, 默认值是 1
+            //     children: [
+            //       `/core/dev`,
+            //       '/core/js_handle_download_file',
+            //       '/core/function_throttle_debounce',
+            //       '/core/scroll',
+            //       '/core/service_worker',
+            //       '/core/storage',
+            //       '/core/scrollBar',
+            //       '/core/concept',
+            //       '/core/git',
+            //       '/core/browser_analysis_doc',
+            //       '/core/regular',
+            //       '/core/cross_origin_resource_sharing',
+            //       '/core/docker',
+            //       '/core/error',//常见错误解决
+            //       '/core/performance',//网页性能
+            //       '/core/typescript',// ts
+            //       `/core/img`,
+            //       `/core/node`, // 深入浅出node
+            //       `/core/vim`,
+            //       `/core/mysql`, // mysql
+            //       `/core/site`,
+            //       `/core/command`,// 服务器端一些命令
+            //       `/core/net_bridge`,// vpn
+            //       `/core/drag`,
+            //     ]
+            //   }
+            "/",
+              {
+                title: '前端',   // 必要的
+                path: '/core/base_dev',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: false, // 可选的, 默认值是 true,
                 sidebarDepth: 2,    // 可选的, 默认值是 1
                 children: [
-                  `/core/dev`,
-                  '/core/js_handle_download_file',
-                  '/core/function_throttle_debounce',
-                  '/core/scroll',
-                  '/core/service_worker',
-                  '/core/storage',
-                  '/core/scrollBar',
-                  '/core/concept',
-                  '/core/git',
-                  '/core/browser_analysis_doc',
-                  '/core/regular',
-                  '/core/cross_origin_resource_sharing',
-                  '/core/docker',
-                  '/core/error',//常见错误解决
-                  '/core/performance',//网页性能
-                  '/core/typescript',// ts
-                  `/core/img`,
-                  `/core/node`, // 深入浅出node
-                  `/core/vim`,
-                  `/core/mysql`, // mysql
-                  `/core/site`,
-                  `/core/command`,// 服务器端一些命令
-                  `/core/net_bridge`,// vpn
-                  `/core/drag`,
+                  '/core/base_dev/dev',
+                  '/core/base_dev/command'
                 ]
               }
-
-            // name: '测试',
-            // title: 'scroll问题',   // 必要的
-            // path: '/scroll/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-            // sidebarDepth: 0,    // 可选的, 默认值是 1
-            // children: [
-            //   '/scroll/scroll'
-            // ]
         ],
     },
     plugins: [
