@@ -13,8 +13,9 @@ module.exports = {
                 title: '笔记',   // 必要的
                 path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: false, // 可选的, 默认值是 true,
-                sidebarDepth: 0,    // 可选的, 默认值是 1
+                sidebarDepth: 2,    // 可选的, 默认值是 1
                 children: [
+                  `/core/dev`,
                   '/core/js_handle_download_file',
                   '/core/function_throttle_debounce',
                   '/core/scroll',
@@ -37,7 +38,7 @@ module.exports = {
                   `/core/site`,
                   `/core/command`,// 服务器端一些命令
                   `/core/net_bridge`,// vpn
-                  `/core/drag`
+                  `/core/drag`,
                 ]
               }
 
