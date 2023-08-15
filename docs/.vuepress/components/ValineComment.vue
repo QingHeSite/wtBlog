@@ -40,8 +40,8 @@ export default {
         // 配置valine参数
         new Valine({
           el: "#valine-vuepress-comment",
-          appId: "21G8ftRHwJm0HSY3gASNfVts-gzGzoHsz", // your appId
-          appKey: "Q7WNJnWJOafr6ILQbdfjOptY", // your appKey
+          appId: "nfyNGgDzL1IhjXeW1IEksSx8-gzGzoHsz", // your appId
+          appKey: "YlbopDS256x0kjASaTwTcvlR", // your appKey
           notify: true,
           verify: false,
           visitor: true,
