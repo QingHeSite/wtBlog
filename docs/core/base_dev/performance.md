@@ -6,7 +6,7 @@ permalink: '/core/performance/'
 ##### 案例
 * mac chrome浏览器同时打开几个网页,导致页面白屏,直接卡死
 1. 检查调试, 打开浏览器开发者工具 > 右上角三个点 > more tools > Performance monitor
-![性能截图](../.vuepress/assets/imgs/performance.png)
+![性能截图](../../.vuepress/assets/imgs/performance.png)
 cpu占比一直在20%以上无法下降
 
 2. 排除, 首先从定时器下手,关闭页面所有`setInterval``setTimeout`,怀疑是高频率的回流造成的

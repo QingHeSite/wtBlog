@@ -71,7 +71,7 @@ permalink: '/core/node/'
     setTimeout()和setInterval()与浏览器中的API是一致的,实现原理与异步I/O比较类似,只是不需要I/O线程池的参与.调用setIimeout()或者setInterval()**创建的定时器会被插入到定时器观察者内部的一个红黑树中**.每次Tick执行时,会从该红黑树中迭代取出定时器对象,检查是否超过定时时间,如果超过,就形成一个事件,它的回调函数将立即执行.
     > 以下为setTimeout执行流程(来源: 深入浅出node.js)
 
-    ![setTimeout执行流程](../.vuepress/assets/imgs/exec_settimeout.jpg)
+    ![setTimeout执行流程](../../.vuepress/assets/imgs/exec_settimeout.jpg)
     需要注意的是,定时器的**执行间隔并非精确**,举个栗子,譬如通过setTimeout()设定一个任务在10毫秒后执行，但是在9毫秒后，有一个任务占用了5毫秒的CPU时间片，再次轮到定时器执行时，时间就已经过期4毫秒。
 
 
