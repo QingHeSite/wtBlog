@@ -1,8 +1,9 @@
 ---
+title: '函数的防抖和节流'
 permalink: '/core/function_throttle_debounce/'
 ---
 
-## 函数的防抖和节流
+### 函数的防抖和节流
 - 一般在高频率执行函数的情况下会使用防抖和节流以减少函数的执行次数
 
 ### 什么是防抖(debounce)
