@@ -49,7 +49,7 @@ module.exports = {
                 // path: '/core/base_dev',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 2,    // 可选的, 默认值是 1
-                    children: [
+                children: [
                   `/core/base_dev/dev`,
                   '/core/base_dev/js_handle_download_file',
                   '/core/base_dev/function_throttle_debounce',
