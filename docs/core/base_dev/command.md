@@ -2,7 +2,7 @@
 title: 'windows和linux中常用命令'
 permalink: '/core/command/'
 ---
-## windows和linux中常用命令
+
 ### windows
 ###### 查找并杀死端口
 1. 查找 `netstat -ano | findstr 10103`
