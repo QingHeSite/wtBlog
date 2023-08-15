@@ -1,4 +1,5 @@
 ---
+title: 'ES vs CommonJS'
 permalink: '/core/concept/'
 ---
 ## 为什么ES模块比CommonJS更好?(Why are ES modules better than CommonJS modules?)

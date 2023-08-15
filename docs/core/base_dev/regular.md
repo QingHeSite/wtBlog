@@ -1,5 +1,5 @@
 ---
-title: '常用正则表达式'
+title: '正则'
 permalink: '/core/base_dev/regular/'
 ---
 
