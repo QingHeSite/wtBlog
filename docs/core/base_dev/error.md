@@ -25,3 +25,17 @@ gyp ERR! not ok
 ```
 - 错误提示中有权限不足
 - 解决`npm i --unsafe-perm=true --allow-root`
+
+#### npm 安装报错
+使用npm安装包的时候报错如下
+```
+npm err! unexpected token '.'
+```
+是由于nvm切换node版本导致,需要升级nvm版本, 报错时nvm版本为`1.1.7`,升级到`1.1.11`后解决
+
+安装新版nvm后,安装node 12.22.0,npm无法使用
+解决如下
+1. 打开`https://nodejs.org/download/release/`
+2. 找到要下的版本,下载解压,修改文件名为v12.22.0,这个格式是nvm使用的
+3. 解压后的文件夹整个放到`C:\Users\name\AppData\Roaming\nvm`
+4. 再使用nvm ls就能查看到了
