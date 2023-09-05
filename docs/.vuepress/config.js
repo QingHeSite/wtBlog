@@ -74,6 +74,7 @@ module.exports = {
                   `/core/base_dev/command`,// 服务器端一些命令
                   `/core/base_dev/net_bridge`,// vpn
                   `/core/base_dev/drag`,
+                  `/core/base_dev/首屏加载优化`,
                 ]
               }
         ],
