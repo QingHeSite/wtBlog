@@ -1,10 +1,10 @@
 ---
-title: '前端开发'
+title: '组件开发'
 permalink: '/core/base_dev/dev/'
 sidebarDepth: 2
 ---
-<!-- 
-## 前端开发 -->
+
+## 组件开发 
 
 ### Masonry
 - create生命周期内计算所有item位置
