@@ -1,5 +1,7 @@
 ---
 title: '组件开发'
+description: '前端虚拟瀑布流开发,提升网页滚动性能'
+keywords: '前端,瀑布流,滚动性能,组件开发'
 permalink: '/core/base_dev/dev/'
 sidebarDepth: 2
 ---
