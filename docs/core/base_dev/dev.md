@@ -4,7 +4,7 @@ permalink: '/core/base_dev/dev/'
 sidebarDepth: 2
 meta:
 	- name: description
-	  content: 前端虚拟瀑布流开发,提升网页滚动性能.
+	  content: 前端虚拟瀑布流开发,提升网页滚动性能
 	- name: keywords
 	  content: 前端,组件开发,小程序
 ---
