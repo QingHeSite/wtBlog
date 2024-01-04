@@ -1,11 +1,12 @@
 ---
 title: '组件开发'
-description: '前端虚拟瀑布流开发,提升网页滚动性能'
 permalink: '/core/base_dev/dev/'
 sidebarDepth: 2
 meta:
+	- name: description
+	  content: 前端虚拟瀑布流开发,提升网页滚动性能
 	- name: keywords
-	  content: 虚拟瀑布流,前端瀑布流开发,前端组件开发,前端性能优化
+	  content: super duper SEO
 ---
 
 ## 组件开发 
