@@ -6,7 +6,7 @@ meta:
   - name: description
     content: 前端虚拟瀑布流开发,提升网页滚动性能
   - name: keywords
-    content: 前端,组件开发,小程序
+    content: 前端,虚拟瀑布流,瀑布流滚动优化,开发瀑布流
 ---
 
 ## 组件开发 
