@@ -5,6 +5,7 @@
     "CI": "yarn docs:build"
   },
   "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
     "node-sass": "4.14.1",
     "sass-loader": "9.0.2",
     "vuepress": "^0.14.11",
