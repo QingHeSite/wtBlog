@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>大前端方向发展🚀</p>
-        <p>👈更多博客打开左侧栏哦</p>
+        <p>技术栈: Vue2, Vue3全家桶, 小程序开发, 微信公众号开发(登录授权,支付等), React, Node, Express, Koa, docker容器化,</p>
         <p>有兴趣可以一起写博客交流经验呢🤔</p>
         <span>wechat👇</span>
         <button class="open-btn" @click="showWechat">展开微信码</button>
