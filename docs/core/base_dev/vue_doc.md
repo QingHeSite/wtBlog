@@ -15,6 +15,7 @@ permalink: '/core/vue_doc/'
 ## 路由守卫
 全局钩子
 - `router.beforEach` 在路由变化前调用,钩子是异步函数,路由需要等钩子函数返回结果才会进行下一步,需要执行`next`函数.
+    可在此阶段处理权限校验,数据验证等.
 
     守卫方法参数
     - `to`代表要进入的路由
@@ -25,4 +26,8 @@ permalink: '/core/vue_doc/'
     - 路由地址
 
     也可传入第三个参数`next`,逻辑顺序内只能调用一次
+
+- `router.beforResolve`在所有组件守卫和路由组件被解析后,在导航被确认之前调用
+
+- `router.afterEach` 全局后置钩子,
 
