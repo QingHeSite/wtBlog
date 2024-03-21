@@ -31,3 +31,9 @@ permalink: '/core/vue_doc/'
 
 - `router.afterEach` 全局后置钩子,
 
+路由独享守卫
+直接在路由配置上定义钩子函数
+- `beforeEnter` 从不同的路由导航进入时触发
+
+组件独享守卫
+- `beforeRouterEnter` 导航被确认前调用,此时无法使用`this`, 需要在`next`传入回掉使用`vm`实例
