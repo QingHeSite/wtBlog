@@ -47,3 +47,45 @@ const todo: TodoPreview = {
   createdAt: 1615544252770,
 };
 ```
+
+#### Pick<Type, Keys>
+通过从 Type 中选取一组属性 Keys（字符串字面或字符串字面的并集）来构造一个类型。
+```js
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+ 
+type TodoPreview = Pick<Todo, "title" | "completed">;
+ 
+const todo: TodoPreview = {
+  title: "Clean room",
+  completed: false,
+};
+```
+
+#### Partial<Type>
+构造一个将 Type 的所有属性设置为可选的类型。此工具将返回一个表示给定类型的所有子集的类型。
+```js
+interface Todo {
+  title: string;
+  description: string;
+}
+ 
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
+  return { ...todo, ...fieldsToUpdate };
+}
+ 
+const todo1 = {
+  title: "organize desk",
+  description: "clear clutter",
+};
+ 
+const todo2 = updateTodo(todo1, {
+  description: "throw out trash",
+});
+```
+
+
+
